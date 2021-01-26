@@ -13,17 +13,13 @@ social_links:
     icon: "far fa-envelope"
     link: "/assets/CV/KitchensJames_CV.pdf"
 
-
-
-
-
-
+  
 sass:
   sass_dir: _sass
   style: compressed
 
 
-
+baseurl: "/willie/"
 
 
 
