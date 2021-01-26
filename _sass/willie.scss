@@ -1,0 +1,179 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+#navbar {
+    background-color: rgba(0,0,0,0.75);
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+
+.section-title {
+    float: left;
+    color: #a19a7f;
+    text-align: center;
+    padding: 26px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.section-title:hover {
+    color: #d9d7cc;
+}
+
+.active {
+    pointer-events: none;
+    cursor: default;
+    color: #d9d7cc;
+}
+
+#navbar #Home {
+    float: left;
+}
+
+#navbar #right-links {
+    float: right;
+}
+
+.burger {
+    float: right;
+    display: none;
+    color: #a19a7f;
+    text-align: center;
+    padding: 23.5px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: none; 
+    transition: transform 1s;
+}
+
+.burger:link, .burger:visited {
+    color: #a19a7f;
+}
+
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+}
+
+@media screen and (max-width: 868px) {
+    #navbar #right-links {
+        display: none;
+    }
+    #navbar .burger {
+        float: right;
+        display: block;
+    }
+    #navbar.responsive {
+        position: fixed;
+        background-color: black;
+    }
+    #navbar.responsive .burger {
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: rotate(90deg);
+        color: #d9d7cc;
+    }
+    #navbar.responsive #right-links {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+    #navbar.responsive #right-links .section-title {
+        width: 100%;
+        color: #a19a7f;
+        background-color: rgba(0,0,0,1);
+    }
+    #navbar.responsive #right-links .section-title:hover {
+        color: rgba(0,0,0,0.75);
+        background-color: #d9d7cc;
+    }
+}
+
+.section-title:hover, .section-title:link,
+.active:hover, .active:link, .burger:hover,
+.inactive:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.slick-dots {
+    top: 95%;
+    left: 0px;
+}
+
+.slick-dots li button:before {
+    color: white !important;
+    font-size: 15px !important;
+    line-height: 15px !important;
+}
+
+
+
+
+
+
+
+
+#contactbar {
+    position: relative;
+    background-color: #d9d7cc;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+#contactbar .content {
+    position: absolute;
+    width: 320px;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+#contactbar .content #logo {
+    width: 100%;
+    max-width: 600px;
+}
+
+#contactbar .content .contact-info {
+    padding: 20px 0px;
+    margin: 0px;
+}
+
+#contactbar .content .contact-info p {
+    margin: 0px;
+}
+
+#contactbar .content .links a {
+    padding: 0px 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#contactbar .content #credit {
+    margin-top: 40px;
+    font-size: 15px;
+}

@@ -1,0 +1,39 @@
+<div id="navbar">
+    
+    <a style="padding: 0px 16px; height: 100%;" id="Home" href="{{'/' | relative_url }}">
+        <img src="{{ '/assets/logo/wg-logo-white.png' | relative_url }}" height=100%>
+    </a>
+
+    <div id="right-links">
+
+        {% if page.layout == 'about' %}
+            <a class="section-title active" id="About" href="{{ '/about' | relative_url }}">about</a>
+        {% else %}
+            <a class="section-title" id="About" href="{{ '/about' | relative_url }}">about</a>
+        {% endif %}
+
+        {% if page.layout == 'portfolio' %}
+            <a class="section-title active" id="Portfolio" href="{{ '/portfolio' | relative_url }}">portfolio</a>
+        {% else %}
+            <a class="section-title" id="Portfolio" href="{{ '/portfolio' | relative_url }}">portfolio</a>
+        {% endif %}
+
+        {% if page.layout == 'gallery' %}
+            <a class="section-title active" id="Gallery" href="{{ '/gallery' | relative_url }}">gallery</a>
+        {% else %}
+            <a class="section-title" id="Gallery" href="{{ '/gallery' | relative_url }}">gallery</a>
+        {% endif %}
+
+        {% if page.layout == 'contact' %}
+            <a class="section-title active" id="Contact" href="{{ '/contact' | relative_url }}">contact</a>
+        {% else %}
+            <a class="section-title" id="Contact" href="{{ '/contact' | relative_url }}">contact</a>
+        {% endif %}
+
+    </div>
+
+    <a href="javascript:void(0);" class="burger section-title" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+</div>

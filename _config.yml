@@ -1,0 +1,34 @@
+name: "Willie Graham"
+email: "w.graham@verizon.net"
+phone: "(804) 399-4339"
+
+social_links:
+  Instagram:
+    icon: "fab fa-instagram"
+    link: "https://github.com/kitchensjn"
+  Facebook:
+    icon: "fab fa-facebook-square"
+    link: "https://www.linkedin.com/in/james-kitchens-668825b2/"
+  Email:
+    icon: "far fa-envelope"
+    link: "/assets/CV/KitchensJames_CV.pdf"
+
+
+
+
+
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+
+
+
+
+job_title: "Historical"
+
+location: "Pomona, California"
+
+theme_color: "#337ab7"

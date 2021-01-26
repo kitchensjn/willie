@@ -1,0 +1,4 @@
+---
+permalink: /portfolio/
+layout: portfolio
+---
