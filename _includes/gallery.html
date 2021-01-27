@@ -1,5 +1,8 @@
 <style>
-    ul {
+    #gallery {
+        padding: 100px 10%;
+    }
+    #gallery #random-photo-set {
         display: flex;
         flex-wrap: wrap;
         list-style-type: none;
@@ -7,28 +10,59 @@
         justify-content: center;
     }
 
-    li {
+    #gallery .single-photo {
+        position: relative;
         height: 200px;
         flex-grow: 0;
         padding: 10px;
     }
 
-    ul li img {
+    #gallery .added-padding {
+        position: absolute;
+        padding: inherit;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+
+    #gallery .overlay {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0;
+        text-align: center;
+        line-height: 180px;
+    }
+
+    #gallery .overlay:hover {
+        opacity: 0.75;
+    }
+
+    #gallery .photo {
         max-height: 100%;
         min-width: 100%;
         object-fit: cover;
         vertical-align: bottom;
     }
+
+
 </style>
 
-<div style="padding: 100px 10%;">
-    <ul>
+<div id="gallery">
+    <ul id="random-photo-set">
         {% assign n = site.static_files | size %}
         {% assign images = site.static_files | sample: n %}
         {% for image in images %}
             {% if image.path contains 'gallery' %}
-                <li>
-                    <img src="{{ image.path | relative_url }}" height="100%">
+                <li class="single-photo">
+                    <img class="photo" src="{{ image.path | relative_url }}" height="100%">
+                    <div class="added-padding">
+                        <a href="https://www.github.com/kitchensjn/" class="overlay">
+                            <p style="color: white; vertical-align: center;">{{ image.name }}</p>
+                        </a>
+                    </div>
                 </li>
             {% endif %}
         {% endfor %}
