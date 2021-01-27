@@ -1,0 +1,36 @@
+<style>
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0px;
+        justify-content: center;
+    }
+
+    li {
+        height: 200px;
+        flex-grow: 0;
+        padding: 10px;
+    }
+
+    ul li img {
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
+    }
+</style>
+
+<div style="padding: 100px 10%;">
+    <ul>
+        {% assign n = site.static_files | size %}
+        {% assign images = site.static_files | sample: n %}
+        {% for image in images %}
+            {% if image.path contains 'gallery' %}
+                <li>
+                    <img src="{{ image.path | relative_url }}" height="100%">
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

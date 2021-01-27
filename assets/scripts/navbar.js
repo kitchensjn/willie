@@ -3,10 +3,8 @@ function hamburger() {
     var x = document.getElementById("navbar");
     if (x.className === "") {
         x.className += "responsive";
-        document.getElementById("Home").classList.add("inactive");
     } else {
         x.className = "";
-        document.getElementById("Home").classList.remove("inactive");
     }
 }
 
@@ -14,7 +12,6 @@ function hamburger() {
 function goTo(id){
     var x = document.getElementById("navbar");
     x.className = "";
-    document.getElementById("Home").classList.remove("inactive");
     if (id == "#bio") {
         $('html,body').animate({scrollTop: $(id).offset().top-30},'slow');
     } else {

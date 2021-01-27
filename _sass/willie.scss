@@ -47,19 +47,7 @@ html, body {
 }
 
 .burger {
-    float: right;
     display: none;
-    color: #a19a7f;
-    text-align: center;
-    padding: 23.5px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    display: none; 
-    transition: transform 1s;
-}
-
-.burger:link, .burger:visited {
-    color: #a19a7f;
 }
 
 .inactiveLink {
@@ -68,12 +56,29 @@ html, body {
 }
 
 @media screen and (max-width: 868px) {
+    #navbar {
+        text-align: center;
+    }
+    #navbar #Home {
+        float: none;
+    }
     #navbar #right-links {
         display: none;
     }
     #navbar .burger {
-        float: right;
+        position: fixed;
+        right: 0;
+        top: 0;
+        color: #a19a7f;
         display: block;
+        text-align: center;
+        padding: 23.5px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        transition: transform 1s;
+    }
+    .burger:link, .burger:visited {
+        color: #a19a7f;
     }
     #navbar.responsive {
         position: fixed;
@@ -83,7 +88,7 @@ html, body {
         position: fixed;
         right: 0;
         top: 0;
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
         color: #d9d7cc;
     }
     #navbar.responsive #right-links {
