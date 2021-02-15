@@ -26,6 +26,7 @@ location: "Pomona, California"
 
 theme_color: "#337ab7"
 
+base_url: willie
 
 plugins:
   - jekyll-exif-data
