@@ -59,7 +59,7 @@
                 <li class="single-photo">
                     <img id="{{ image.name }}" class="photo" src="{{ image.path | relative_url }}" height="100%">
                     <div class="added-padding">
-                        <a class="overlay">
+                        <a href="https://www.github.com/kitchensjn" class="overlay">
                             {% assign remove_forward_slash = image.path | slice: 1,image.path.size %}
                             <p id="{{ image.name }}-desc" style="margin: 0px; color: white; vertical-align: center;">{{ remove_forward_slash | exif: 'artist'}}</p>
                         </a>
