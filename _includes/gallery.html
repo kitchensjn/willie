@@ -1,6 +1,6 @@
 <style>
     #gallery {
-        padding: 100px 10%;
+        padding: 100px 1%;
     }
     #gallery #random-photo-set {
         display: flex;
@@ -57,10 +57,11 @@
         {% for image in images %}
             {% if image.path contains 'gallery' %}
                 <li class="single-photo">
-                    <img class="photo" src="{{ image.path | relative_url }}" height="100%">
+                    <img id="{{ image.name }}" class="photo" src="{{ image.path | relative_url }}" height="100%">
                     <div class="added-padding">
-                        <a href="https://www.github.com/kitchensjn/" class="overlay">
-                            <p style="color: white; vertical-align: center;">{{ image.name }}</p>
+                        <a class="overlay">
+                            {% assign image_path = "assets/photos/gallery/test1.jpg" | relative_url %}
+                            <p id="{{ image.name }}-desc" style="margin: 0px; color: white; vertical-align: center;">{{ 'assets/photos/gallery/test1.jpg' | exif: 'artist'}}</p>
                         </a>
                     </div>
                 </li>
@@ -68,3 +69,16 @@
         {% endfor %}
     </ul>
 </div>
+
+<!--
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+<script>
+    EXIF.getData(document.getElementById("{{ image.name }}"), function() {
+        if (this.exifdata.Copyright == undefined) {
+            document.getElementById('{{ image.name }}-desc').innerHTML = "NA";
+        } else {
+            document.getElementById('{{ image.name }}-desc').innerHTML = this.exifdata.Copyright;
+        }
+    });
+</script>
+-->

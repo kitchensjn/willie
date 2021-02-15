@@ -25,3 +25,7 @@ job_title: "Historical"
 location: "Pomona, California"
 
 theme_color: "#337ab7"
+
+
+plugins:
+  - jekyll-exif-data
