@@ -56,7 +56,7 @@
         {% for image in images %}
             {% if image.path contains 'gallery' %}
                 <li class="single-photo fade-in">
-                    <img id="{{ image.name }}" class="photo" src="{{ image.path | relative_url }}" height="100%">
+                    <img id="{{ image.name }}" class="photo" src="{{ image.path | relative_url }}" height="100%" loading="lazy">
                     <div class="added-padding">
                         <a class="overlay">
                             {% assign remove_forward_slash = image.path | slice: 1,image.path.size %}
