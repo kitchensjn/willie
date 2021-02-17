@@ -60,7 +60,7 @@
         {% assign images = site.static_files | sample: n %}
         {% for image in images %}
             {% if image.path contains 'gallery' %}
-                <li class="single-photo">
+                <li class="single-photo appear">
                     <img id="{{ image.name }}" class="photo" src="{{ image.path | relative_url }}" height="100%" loading="lazy">
                     <div class="added-padding">
                         <a class="overlay">
