@@ -1,4 +1,4 @@
-const faders = document.querySelectorAll('.project')
+const faders = document.querySelectorAll('.fade-in')
 
 const appearOptions = {
 };
@@ -18,4 +18,4 @@ const appearOnScroll = new IntersectionObserver(
 
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
-}); 
+});
