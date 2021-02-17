@@ -1,7 +1,8 @@
 <style>
   
 section {
-    min-height: 100vh;
+    min-height: 750px;
+    height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -11,6 +12,7 @@ section {
 
 .container {
     width: 100%;
+    height: 100%;
     padding: 0px;
     margin: 0 auto;
     display: flex;
@@ -20,7 +22,7 @@ section {
 
 .image {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: url('{{ "/assets/photos/about/2017wjg0605_0040_colorcorrected.jpg" | relative_url }}');
     background-position: center;
     background-repeat: no-repeat;
@@ -38,7 +40,7 @@ section {
     font-size: 18px;
 }
 
-@media only screen and (max-width: 1300px) {    
+@media only screen and (max-width: 1500px) {    
     section {
         flex-direction: column;
         justify-content: flex-start;
@@ -49,7 +51,7 @@ section {
     }
     .image {
         height: 75vh;
-        background-position: 30% 40%;
+        background-position: 15% 40%;
     }
     .blurb {
         width: 100%;
