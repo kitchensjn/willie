@@ -15,6 +15,12 @@
         height: 200px;
         flex-grow: 0;
         padding: 10px;
+        opacity: 0;
+        transition: opacity 1000ms ease-in;
+    }
+
+    #gallery .single-photo.appear {
+        opacity: 1;
     }
 
     #gallery .added-padding {
@@ -46,8 +52,6 @@
         object-fit: cover;
         vertical-align: bottom;
     }
-
-
 </style>
 
 <div id="gallery">
@@ -57,9 +61,9 @@
         {% for image in images %}
             {% if image.path contains 'gallery' %}
                 <li class="single-photo">
-                    <img id="{{ image.name }}" class="photo" src="{{ image.path | relative_url }}" height="100%">
+                    <img id="{{ image.name }}" class="photo" src="{{ image.path | relative_url }}" height="100%" loading="lazy">
                     <div class="added-padding">
-                        <a href="https://www.github.com/kitchensjn" class="overlay">
+                        <a class="overlay">
                             {% assign remove_forward_slash = image.path | slice: 1,image.path.size %}
                             <p id="{{ image.name }}-desc" style="margin: 0px; color: white; vertical-align: center;">{{ remove_forward_slash | exif: 'artist'}}</p>
                         </a>
@@ -69,3 +73,6 @@
         {% endfor %}
     </ul>
 </div>
+
+
+<script src="{{ '/assets/scripts/fader.js' | relative_url }}"></script>

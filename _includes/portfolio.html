@@ -1,7 +1,27 @@
-<div style="padding: 100px 10%;">
+<style>
+
+#portfolio {
+    padding: 100px 10%;
+}
+
+#portfolio .project {
+    height: 350px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 1000ms ease-in;
+}
+
+#portfolio .project.appear {
+    opacity: 1;
+}
+
+</style>
+
+
+<div id="portfolio">
     {% for post in site.posts %} 
         {% if post.categories contains "portfolio" %}
-            <div class="col-sm-6 col-md-4 col-lg-4" style="height: 350px; padding: 10px;">
+            <div class="project col-sm-6 col-md-4 col-lg-4">
                 <a href="{{ post.url | relative_url }}" style="display: block; width: 100%; height: 100%; padding: 10px; border: 1px solid black;">
                     <div style="position: relative; width: 100%; height: 100%; background-position: center; background-image: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75)), url('{{ post.thumbnail | relative_url }}')">
                         <p style="position: absolute; bottom: 0px; left: 0px; color: white; margin: 0px; font-size: 30px;">{{ post.name }}</p>
@@ -11,3 +31,5 @@
         {% endif %}
     {% endfor %}
 </div>
+
+<script src="{{ '/assets/scripts/fader.js' | relative_url }}"></script>

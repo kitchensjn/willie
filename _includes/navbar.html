@@ -6,6 +6,12 @@
 
     <div id="right-links">
 
+        {% if page.layout == 'home' %}
+            <a class="section-title active" id="Home" href="{{ '/' | relative_url }}">home</a>
+        {% else %}
+            <a class="section-title" id="Home" href="{{ '/' | relative_url }}">home</a>
+        {% endif %}
+        
         {% if page.layout == 'about' %}
             <a class="section-title active" id="About" href="{{ '/about' | relative_url }}">about</a>
         {% else %}

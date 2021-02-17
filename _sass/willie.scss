@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader&display=swap');
+
 html, body {
     padding: 0px;
     margin: 0px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Newsreader', serif;
 }
 
-
-
-
+p {
+    font-size: 18px;
+}
 
 #navbar {
     background-color: rgba(0,0,0,0.75);
