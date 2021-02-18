@@ -9,10 +9,12 @@ html {
 body { 
     padding: 0px;
     margin: 0px;
-    transition: opacity 1s ease-in;
-    animation: fadeInAnimation ease 1s; 
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards;
+    //transition: opacity 1s ease-in;
+    //transition-delay: 3s;
+    //animation: fadeInAnimation ease 1s;
+    //animation-delay: 3s;
+    //animation-iteration-count: 1; 
+    //animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation { 

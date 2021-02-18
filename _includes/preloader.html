@@ -1,0 +1,30 @@
+<style>
+    .preload {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 101;
+        transition: opacity 1s ease;
+    }
+    .preload.finish {
+        opacity: 0;
+        pointer-events: none;
+    }
+</style>
+
+<div class="preload">
+    <h1>{{ page.layout }}</h1>
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+        const preload = document.querySelector('.preload');
+        preload.classList.add('finish');
+    });
+</script>
