@@ -23,8 +23,24 @@
 </div>
 
 <script>
+
+    var elapsed = false;
+    var loaded = false;
+
+    setTimeout(function() {
+        elapsed = true;
+        if (loaded) {
+            const preload = document.querySelector('.preload');
+            preload.classList.add('finish');
+        };
+    }, 1500);
+
     window.addEventListener('load', () => {
-        const preload = document.querySelector('.preload');
-        preload.classList.add('finish');
+        loaded = true;
+        if (elapsed) {
+            const preload = document.querySelector('.preload');
+            preload.classList.add('finish');
+        };
     });
+
 </script>
