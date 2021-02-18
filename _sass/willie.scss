@@ -9,12 +9,6 @@ html {
 body { 
     padding: 0px;
     margin: 0px;
-    //transition: opacity 1s ease-in;
-    //transition-delay: 3s;
-    //animation: fadeInAnimation ease 1s;
-    //animation-delay: 3s;
-    //animation-iteration-count: 1; 
-    //animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation { 
@@ -33,6 +27,8 @@ p {
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -webkit-transition: opacity 1s ease-in;
 }
 
 .fade-in.appear {
@@ -88,7 +84,7 @@ p {
     #navbar {
         text-align: center;
     }
-    #navbar #Home {
+    #navbar #Logo {
         float: none;
     }
     #navbar #right-links {
@@ -131,6 +127,10 @@ p {
         background-color: rgba(0,0,0,1);
     }
     #navbar.responsive #right-links .section-title:hover {
+        color: rgba(0,0,0,0.75);
+        background-color: #d9d7cc;
+    }
+    #navbar.responsive #right-links .active{
         color: rgba(0,0,0,0.75);
         background-color: #d9d7cc;
     }
