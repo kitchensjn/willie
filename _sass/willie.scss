@@ -9,6 +9,8 @@ body {
     padding: 0px;
     margin: 0px;
     font-family: 'Newsreader', serif !important;
+    width: 100vw;
+    overflow: hidden;
 }
 
 @keyframes fadeInAnimation { 
@@ -97,7 +99,7 @@ p {
         color: #a19a7f;
         display: block;
         text-align: center;
-        padding: 23.5px 16px;
+        padding: 27px 16px 25px 16px;
         text-decoration: none;
         font-size: 20px;
         transition: transform 1s;
@@ -161,10 +163,6 @@ p {
     font-size: 15px !important;
     line-height: 15px !important;
 }
-
-
-
-
 
 
 
