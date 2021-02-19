@@ -10,15 +10,16 @@ body {
     margin: 0px;
     font-family: 'Newsreader', serif !important;
     width: 100%;
+    background-color: #e5e6e3;
 }
 
 @keyframes fadeInAnimation { 
-0% { 
-    opacity: 0; 
-} 
-100% { 
-    opacity: 1; 
-} 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    } 
 }
 
 p {
@@ -47,7 +48,7 @@ p {
 
 .section-title {
     float: left;
-    color: #a19a7f;
+    color: #e5e6e3;
     text-align: center;
     padding: 29px 16px;
     text-decoration: none;
@@ -55,13 +56,13 @@ p {
 }
 
 .section-title:hover {
-    color: #d9d7cc;
+    color: #438f95;
 }
 
 .active {
     pointer-events: none;
     cursor: default;
-    color: #d9d7cc;
+    color: #438f95;
 }
 
 #navbar #Home {
@@ -95,7 +96,7 @@ p {
         position: fixed;
         right: 0;
         top: 0;
-        color: #a19a7f;
+        color: #e5e6e3;
         display: block;
         text-align: center;
         padding: 27px 16px 25px 16px;
@@ -104,7 +105,7 @@ p {
         transition: transform 1s;
     }
     .burger:link, .burger:visited {
-        color: #a19a7f;
+        color: #e5e6e3;
     }
     #navbar.responsive {
         position: fixed;
@@ -115,7 +116,7 @@ p {
         right: 0;
         top: 0;
         transform: rotate(-90deg);
-        color: #d9d7cc;
+        color: #438f95;
     }
     #navbar.responsive #right-links {
         display: block;
@@ -124,16 +125,16 @@ p {
     }
     #navbar.responsive #right-links .section-title {
         width: 100%;
-        color: #a19a7f;
+        color: #e5e6e3;
         background-color: rgba(0,0,0,1);
     }
     #navbar.responsive #right-links .section-title:hover {
         color: rgba(0,0,0,0.75);
-        background-color: #d9d7cc;
+        background-color: #438f95;
     }
     #navbar.responsive #right-links .active{
         color: rgba(0,0,0,0.75);
-        background-color: #d9d7cc;
+        background-color: #438f95;
     }
 }
 
@@ -158,7 +159,7 @@ p {
 }
 
 .slick-dots li button:before {
-    color: white !important;
+    color: #e5e6e3 !important;
     font-size: 15px !important;
     line-height: 15px !important;
 }
@@ -167,7 +168,7 @@ p {
 
 #contactbar {
     position: relative;
-    background-color: #d9d7cc;
+    background-color: #e5e6e3;
     width: 100%;
     height: 400px;
     text-align: center;
