@@ -6,9 +6,12 @@
     </a>
     -->
 
-    <a class="section-title active" style="font-size: 30px; padding: 22px 16px;">
-        WILLIE GRAHAM
-    </a>
+    
+    {% if page.layout == 'home' %}
+        <a class="section-title active" style="font-size: 30px; padding: 22px 16px; color: #d9d7cc;" href="{{ '/' | relative_url }}" >WILLIE GRAHAM</a>
+    {% else %}
+        <a class="section-title" style="font-size: 30px; padding: 22px 16px; color: #d9d7cc;" href="{{ '/' | relative_url }}" >WILLIE GRAHAM</a>
+    {% endif %}
 
     <div id="right-links">
 
