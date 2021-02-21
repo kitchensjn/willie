@@ -2,7 +2,7 @@
     {% assign n = site.static_files | size %}
     {% assign images = site.static_files | sample: n %}
     {% for image in images %}
-        {% if image.path contains 'photos/carousel/' %}
+        {% if image.path contains 'photos/home/carousel/' %}
             <div style="width: 100vw; height: 100vh; background-image:url('{{ image.path | relative_url }}'); background-size: cover; background-position: center;"></div>
         {% endif %}
     {% endfor %}
