@@ -19,7 +19,6 @@ sass:
   style: compressed
 
 
-
 job_title: "Historical"
 
 location: "Pomona, California"
@@ -30,3 +29,8 @@ baseurl: "/willie"
 
 plugins:
   - jekyll-exif-data
+
+
+collections:
+  portfolio:
+    output: true

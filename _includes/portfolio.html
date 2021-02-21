@@ -1,32 +1,42 @@
 <style>
 
-#portfolio {
-    padding: 100px 10%;
-    background-color: #e5e6e3;
-    display: block;
-    overflow: auto;
-}
+    #portfolio {
+        margin-top: 80px;
+        padding: 20px 10% 20px 10%;
+        background-color: #e5e6e3;
+        display: block;
+        overflow: auto;
+    }
+    
+    #portfolio .project {
+        height: calc(100vh - 120px);
+        padding: 10px;
+    }
+    
+    </style>
 
-#portfolio .project {
-    height: 350px;
-    padding: 10px;
-}
+    {% capture types %}
+        {% for project in site.portfolio %}
+            {{ project.type }}
+        {% endfor %}
+    {% endcapture %}
+    {% assign uniq_types = types | split:' ' | uniq %}
 
-</style>
-
-
-<div id="portfolio">
-    {% for post in site.posts %} 
-        {% if post.categories contains "portfolio" %}
+    <div id="portfolio">
+        {% for type in uniq_types %}
+            {% assign type_projects = site.portfolio | where: 'type', type %}
             <div class="project fade-in col-sm-6 col-md-4 col-lg-4">
-                <a href="{{ post.url | relative_url }}" style="display: block; width: 100%; height: 100%; padding: 10px; border: 1px solid grey;">
-                    <div style="position: relative; width: 100%; height: 100%; background-position: center; background-image: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75)), url('{{ post.thumbnail | relative_url }}')">
-                        <p style="position: absolute; bottom: 0px; left: 5px; color: white; margin: 0px; font-size: 30px;">{{ post.name }}</p>
-                    </div>
+                <a href="{{ type }}" style="display: block; width: 100%; height: 100%; padding: 10px; border: 1px solid grey;">
+                    {% if type_projects[0].ignore != true %}
+                        <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%; height: 100%; background-position: center; background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('{{ type_projects[0].thumbnail | relative_url }}')">
+                    {% else %}
+                        <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%; height: 100%; background-position: center; background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('{{ type_projects[1].thumbnail | relative_url }}')">
+                    {% endif %}
+                            <p style="color: white; margin: 0px; font-size: 30px;">{{ type }}</p>
+                        </div>
                 </a>
             </div>
-        {% endif %}
-    {% endfor %}
-</div>
-
-<script src="{{ '/assets/scripts/fader.js' | relative_url }}"></script>
+        {% endfor %}
+    </div>
+    
+    <script src="{{ '/assets/scripts/fader.js' | relative_url }}"></script>

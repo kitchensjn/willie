@@ -1,4 +1,0 @@
----
-permalink: /portfolio/
-layout: portfolio
----
