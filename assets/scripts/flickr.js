@@ -1,10 +1,1 @@
-fetch("https://www.flickr.com/services/feeds/photos_public.gne")
-    .then(res => {
-        if (res.ok) {
-            console.log("SUCCESS");
-        } else {
-            console.log("NOT SUCCESSFUL")
-        }
-    })
-    .then(data => console.log(data))
-    .catch(error => console.log("ERROR"));
+fetch("http://api.flickr.com/services/feeds/groups_discuss.gne?id=34427469792@N01&lang=en-us&format=rss_200");
