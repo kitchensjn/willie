@@ -1,78 +1,305 @@
 <style>
 
-#top {
-    position: relative;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    background-color: white;
-    width: 100%;
-    padding: 5%;
-    margin-bottom: 120px;
-}
-
-#top #left {
-    position: relative;
-    width: 55%;
-    height: 100%;
-    z-index: 10;
-    text-align: right;
-    direction: rtl;
-}
-
-#model {
-    z-index: 10;
-    height: 100%;
-}
-
-@media only screen and (max-width: 1000px) {
     #top {
-        flex-direction: column;
+        display: table;
+        width: 100%;
+        padding: 5%;
+        background-color: #e5e6e3;
     }
-}
+
+    #top #half-left {
+        display: table-cell;
+        width: 55%;
+        background-image: url('/willie/assets/photos/home/bio/2010JRO1004004.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #top #half-right {
+        display: table-cell;
+        width: 45%;
+        min-height: 100%;
+    }
+
+    #top #half-right #bio {
+        width: 100%;
+        margin-bottom: 100px;
+        background-color: #438f95;
+        padding: 20px;
+        color: #e5e6e3;
+    }
+
+    #top #half-right #bio h2 {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    #top #half-right #bio hr {
+        border: 1.5px solid #e5e6e3;
+    }
+
+    #top #half-right #bio p {
+        font-size: 18px;
+        margin: 0px;
+    }
+    
+    #bottom {
+        position: relative;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.75);
+        width: 100%;
+        height: 75vw;
+        padding: 0% 5% 5% 5%;
+    }
+
+    #bottom #half-left {
+        width: 45%;
+        height: 100%;
+    }
+
+    #bottom #half-left #quad-top {
+        height: 50%;
+        width: 100%;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    #bottom #half-left #quad-top #mantle {
+        width: 100%;
+        height: 100%;
+        background-image: url('/willie/assets/photos/home/bio/2014wjg1001_0160.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #bottom #half-left #quad-bottom {
+        height: 50%;
+        width: 100%;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+
+    #bottom #half-left #quad-bottom #house {
+        position: relative;
+        left: 20%;
+        width: 80%;
+        height: 100%;
+        background-image: url('/willie/assets/photos/home/bio/Fig10-21A.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #bottom #half-right {
+        position: relative;
+        width: 55%;
+        height: 100%;
+    }
+
+    #bottom #half-right #quad-top {
+        margin-left: 20%;
+        width: 80%;
+        margin-top: -120px;
+        height: 20%;
+    }
+
+    #bottom #half-right #quad-top #room {
+        position: relative;
+        z-index: 1;
+        margin: 0% 5%;
+        width: 90%;
+        height: 175%;
+        background-image: url('/willie/assets/photos/home/bio/Fig13-02.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #bottom #half-right #quad-bottom {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+    }
+
+    #bottom #half-right #quad-bottom #box {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        top: 25%;
+    }
+    #bottom #half-right #quad-bottom #box #stones {
+        transform: scaleX(-1);
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        background-image: url('/willie/assets/photos/home/bio/Ile aux Marins w rock grave 1 600 dpi.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .headline {
+        position: absolute; 
+        background-color: #438f95;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .headline p {
+        margin: 0px;
+        font-size: 30px;
+        color: #e5e6e3;
+    }
+
+    #headline-4 {
+        display: none;
+    }
+
+    @media screen and (max-width: 868px) {
+        #top #half-left {
+            display: block;
+            width: 100%;
+            height: 500px;
+        }
+        #top #half-right {
+            display: block;
+            width: 100%; 
+        }
+        #top #half-right #bio {
+            margin: 0px;
+        }
+
+        #bottom {
+            display: block;
+            height: 2000px;
+            padding: 0px;
+        }
+
+        #bottom #half-left {
+            width: 100%;
+            height: 50%;
+        }
+
+        #bottom #half-left #quad-top {
+            height: 50%;
+            width: 100%;
+            padding: 0px;
+            padding: 5% 5% 2.5% 5%;
+        }
+
+        #bottom #half-left #quad-bottom {
+            height: 50%;
+            width: 100%;
+            padding: 0px;
+            padding: 2.5% 5%;
+        }
+        #bottom #half-left #quad-bottom #house {
+            left: 0%;
+            width: 100%;
+        }
+
+
+        #bottom #half-right {
+            width: 100%;
+            height: 50%;
+        }
+
+        #bottom #half-right #quad-top {
+            width: 100%;
+            margin: 0px;
+            height: 50%;
+            padding: 2.5% 5%;
+        }
+
+        #bottom #half-right #quad-top #room {
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #bottom #half-right #quad-bottom {
+            padding: 0px;
+            height: 50%;
+            padding: 2.5% 5% 5% 5%;
+        }
+
+        #bottom #half-right #quad-bottom #box {
+            height: 100%;
+            top: 0%;
+        }
+        #bottom #half-right #quad-bottom #box #stones {
+            margin: 0px;
+        }
+
+        #headline-1 {
+            display: block;
+            position: absolute;
+            top: 25%;
+            z-index: 10;
+        }
+
+        #headline-2 {
+            display: none;
+        }
+
+        #headline-3 {
+            z-index: 10;
+        }
+
+        #headline-4 {
+            display: block;
+            position: absolute;
+            top: 75%;
+            z-index: 10;
+        }
+
+    }
 
 </style>
 
 
-<div style="display: table; width: 100%; padding: 5%; margin-bottom: 120px; background-color: #e5e6e3;">
-    <div style="display: table-cell; width: 55%; background-image: url('/willie/assets/photos/home/bio/2010JRO1004004.jpg'); background-position: center; background-size: cover;"></div>
-    <div style="display: table-cell; width: 45%; min-height: 100%;">
-        <div style="width: 100%; background-color: #438f95; padding: 20px; color: #e5e6e3;">
-            <h2 style="margin-top: 10px; font-weight: bold;">An independent historic architecture firm located in Midlothian, Virginia.</h2>
-            <hr style="border: 1.5px solid #e5e6e3;;"></hr>
-            <p style="font-size: 18px; color;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et erat vel nibh laoreet ultrices id in sapien. Curabitur felis purus, volutpat in risus posuere, hendrerit tempus lacus. Praesent sed enim sit amet nisl porttitor placerat. Maecenas vulputate purus lacus. Cras sit amet tortor consectetur, varius lorem id, dapibus mauris. Nunc porta ligula ut ipsum sagittis, ac imperdiet augue tincidunt. Aliquam vulputate molestie libero, quis mattis quam efficitur non. Maecenas molestie justo odio, dignissim consequat sem ultricies non. Vestibulum nec augue in nunc varius cursus vitae sed nibh. Phasellus porta odio quam, dignissim lobortis dolor congue at. Ut placerat, dui eget accumsan lobortis, odio ante rhoncus tellus, ut faucibus purus lacus vitae sapien. Curabitur et semper justo. Praesent pharetra nibh facilisis, tincidunt leo nec, ultrices odio. Nullam pulvinar, sem sed venenatis consequat, lectus mauris tempor libero, id hendrerit orci orci in nisl. Nam pharetra nisi eu libero lobortis, ut pretium mi auctor. Curabitur semper eros a nibh bibendum tempus. Maecenas elementum nisi a rutrum placerat. Ut finibus imperdiet aliquam. Mauris elit purus, viverra at turpis sit amet, rhoncus lobortis urna. Vivamus viverra ullamcorper iaculis. Vivamus a purus vel arcu varius sagittis quis sed arcu. Phasellus bibendum nibh eget orci pellentesque ultricies.</p>
+<div id="top">
+    <div id="half-left"></div>
+    <div id="half-right">
+        <div id="bio">
+            <h2>An independent historic architecture firm located in Midlothian, Virginia.</h2>
+            <hr></hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et erat vel nibh laoreet ultrices id in sapien. Curabitur felis purus, volutpat in risus posuere, hendrerit tempus lacus. Praesent sed enim sit amet nisl porttitor placerat. Maecenas vulputate purus lacus. Cras sit amet tortor consectetur, varius lorem id, dapibus mauris. Nunc porta ligula ut ipsum sagittis, ac imperdiet augue tincidunt. Aliquam vulputate molestie libero, quis mattis quam efficitur non. Maecenas molestie justo odio, dignissim consequat sem ultricies non. Vestibulum nec augue in nunc varius cursus vitae sed nibh. Phasellus porta odio quam, dignissim lobortis dolor congue at. Ut placerat, dui eget accumsan lobortis, odio ante rhoncus tellus, ut faucibus purus lacus vitae sapien. Curabitur et semper justo. Praesent pharetra nibh facilisis, tincidunt leo nec, ultrices odio. Nullam pulvinar, sem sed venenatis consequat, lectus mauris tempor libero, id hendrerit orci orci in nisl. Nam pharetra nisi eu libero lobortis, ut pretium mi auctor. Curabitur semper eros a nibh bibendum tempus. Maecenas elementum nisi a rutrum placerat. Ut finibus imperdiet aliquam. Mauris elit purus, viverra at turpis sit amet, rhoncus lobortis urna. Vivamus viverra ullamcorper iaculis. Vivamus a purus vel arcu varius sagittis quis sed arcu. Phasellus bibendum nibh eget orci pellentesque ultricies.</p>
         </div>
-        <!--
-        <div style="width: 100%; height: 60%; padding-bottom: 10px;">
-        </div>
-        <div style="width: 100%; height: 40%; padding-top: 10px;">
-        </div>
-        -->
     </div>
 </div>
-<div style="position: relative; display: flex; align-content: center; justify-content: center; background-color: rgba(0,0,0,0.75); width: 100%; height: 75vw; padding: 0% 5% 5% 5%;">
-    <div style="width: 45%; height: 100%;">
-        <div style="height: 50%; width: 100%; padding-right: 10px; padding-bottom: 10px;">
-            <div style="width: 100%; height: 100%; background-image: url('/willie/assets/photos/home/bio/2014wjg1001_0160.jpg'); background-position: center; background-size: cover;"></div>
+<div id="bottom">
+    <div id="half-left">
+        <div id="quad-top">
+            <div id="mantle"></div>
         </div>
-        <div style="height: 50%; width: 100%; padding-right: 10px; padding-top: 10px;">
-            <div style="position: relative; left: 20%; width: 80%; height: 100%; background-image: url('/willie/assets/photos/home/bio/Fig10-21A.jpg'); background-position: center; background-size: cover;"></div>
-        </div>
-    </div>
-    <div style="position: relative; width: 55%; height: 100%;">
-        <div style="margin-left: 20%; width: 80%; margin-top: -120px; height: 20%;">
-            <div style="position: relative; z-index: 1; margin: 0% 5%; width: 90%; height: 175%; background-image: url('/willie/assets/photos/home/bio/Fig13-02.jpg'); background-position: center; background-size: cover;"></div>
-            <div style="position: relative; z-index: 2; background-color: #438f95; top: 10%; left: 50%; transform: translate(-50%, -50%); max-width: 300px; padding: 20px; text-align: center;">
-                <p style="margin: 0px; font-size: 30px; color: #e5e6e3;">documentary photography</p>
-            </div>
-        </div>
-        <div style="width: 100%; height: 100%; padding-left: 10px;">
-            <div style="position: relative; width: 100%; height: 50%; top: 22%;">
-                <div style="transform: scaleX(-1); width: 100%; height: 100%; margin-top: 20px; background-image: url('/willie/assets/photos/home/bio/Ile aux Marins w rock grave 1 600 dpi.jpg'); background-position: center; background-size: cover;"></div>
-            </div>
+        <div id="quad-bottom">
+            <div id="house"></div>
         </div>
     </div>
-    <div style="position: absolute; background-color: #438f95; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 300px; padding: 20px; text-align: center;">
-        <p style="margin: 0px; font-size: 30px; color: #e5e6e3;">innovative historic restoration & recreation</p>
+    <div id="half-right">
+        <div id="quad-top">
+            <div id="room"></div>
+            <div id="headline-2" class="headline" style="position: relative; z-index: 2; top: 10%;">
+                <p>documentary photography</p>
+            </div>
+        </div>
+        <div id="quad-bottom">
+            <div id="box">
+                <div id="stones"></div>
+            </div>
+        </div>
+    </div>
+    <div id="headline-1" class="headline">
+        <p>incredible design</p>
+    </div>
+    <div id="headline-3" class="headline">
+        <p>innovative historic restoration & recreation</p>
+    </div>
+    <div id="headline-4" class="headline">
+        <p>documentary photography</p>
     </div>
 </div>
