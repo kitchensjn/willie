@@ -12,6 +12,20 @@
     padding: 10px;
 }
 
+#portfolio .project .overlay {
+    display: none;
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    top: 20px;
+    left: 20px;
+    background-color: #438f9549;
+}
+
+#portfolio .project:hover .overlay {
+    display: block;
+}
+
 </style>
 
 
@@ -20,10 +34,11 @@
     {% for project in type_projects %}
         {% if project.index != true %}
             <div class="project fade-in col-sm-6 col-md-4 col-lg-4">
-                <a href="{{ project.url | relative_url }}" style="display: block; width: 100%; height: 100%; padding: 10px; border: 1px solid grey;">
+                <a href="{{ project.url | relative_url }}" style="text-decoration: none; display: block; width: 100%; height: 100%; padding: 10px; border: 1px solid grey;">
                     <div style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%; height: 100%; background-position: center; background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('{{ project.thumbnail | relative_url }}')">
-                        <p style="color: white; margin: 0px; font-size: 30px;">{{ project.name }}</p>
+                        <p style="z-index: 10; color: white; margin: 0px; font-size: 30px;">{{ project.name | upcase }}</p>
                     </div>
+                    <div class="overlay"></div>
                 </a>
             </div>
         {% endif %}
