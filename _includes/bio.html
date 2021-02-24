@@ -23,7 +23,7 @@
 
     #top #half-right #bio {
         width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 150px;
         background-color: #438f95;
         padding: 20px;
         color: #e5e6e3;
@@ -100,8 +100,8 @@
     #bottom #half-right #quad-top {
         margin-left: 15%;
         width: 85%;
-        margin-top: -120px;
-        height: 20%;
+        margin-top: -175px;
+        height: 30%;
     }
 
     #bottom #half-right #quad-top #room {
@@ -109,7 +109,7 @@
         z-index: 1;
         margin: 0%;
         width: 100%;
-        height: 175%;
+        height: 150%;
         background-image: url('/willie/assets/photos/home/bio/Fig13-02.jpg');
         background-position: center;
         background-size: cover;
@@ -262,7 +262,7 @@
 
 
 <div id="top">
-    <div id="half-left"></div>
+    <div id="half-left" class="fade-in"></div>
     <div id="half-right">
         <div id="bio">
             <h2>An independent historic architecture firm located in Midlothian, Virginia.</h2>
@@ -274,22 +274,22 @@
 <div id="bottom">
     <div id="half-left">
         <div id="quad-top">
-            <div id="mantle"></div>
+            <div id="mantle" class="fade-in"></div>
         </div>
         <div id="quad-bottom">
-            <div id="house"></div>
+            <div id="house" class="fade-in"></div>
         </div>
     </div>
     <div id="half-right">
         <div id="quad-top">
-            <div id="room"></div>
+            <div id="room" class="fade-in"></div>
             <div id="headline-2" class="headline" style="position: relative; z-index: 2; top: 10%;">
                 <p>documentary photography</p>
             </div>
         </div>
         <div id="quad-bottom">
             <div id="box">
-                <div id="stones"></div>
+                <div id="stones" class="fade-in"></div>
             </div>
         </div>
     </div>
@@ -303,3 +303,5 @@
         <p>documentary photography</p>
     </div>
 </div>
+
+<script src="{{ '/assets/scripts/fader.js' | relative_url }}"></script>
