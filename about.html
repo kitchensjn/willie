@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Willie Graham</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://kit.fontawesome.com/b53b88607b.js" crossorigin="anonymous"></script>
+
+<script src="/willie/assets/scripts/navbar.js"></script>
+
+<link rel="stylesheet" href="/willie/assets/styles/main.css">
+
+<link rel="preload" href="/willie/assets/logo/wg-logo-white.png" as="image"></head>
+
+    <body><style>
+    .preload {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 50;
+        transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease-in;
+        -webkit-transition: opacity 1s ease-in;
+    }
+    .preload.finish {
+        opacity: 0;
+        pointer-events: none;
+    }
+</style>
+
+<div class="preload">
+    <img style="max-width: 100%;" src="/willie/assets/logo/wg-logo-white.png">
+</div>
+
+<script>
+
+    var elapsed = false;
+    var loaded = false;
+
+    setTimeout(function() {
+        elapsed = true;
+        if (loaded) {
+            const preload = document.querySelector('.preload');
+            preload.classList.add('finish');
+        };
+    }, 1000);
+
+    window.addEventListener('load', () => {
+        loaded = true;
+        if (elapsed) {
+            const preload = document.querySelector('.preload');
+            preload.classList.add('finish');
+        };
+    });
+
+</script><div id="navbar">
+    
+    <!--
+    <a style="padding: 0px 16px; height: 100%;" id="Logo" href="/willie/">
+        <img src="/willie/assets/logo/wg-logo-white.png" height=100%>
+    </a>
+    -->
+
+    
+    
+        <a class="section-title" style="font-size: 30px; padding: 22px 16px 16px 16px; color: #e5e6e3;" href="/willie/" >WILLIE GRAHAM</a>
+    
+
+    <div id="right-links">
+
+        
+            <a class="section-title" id="Home" href="/willie/">home</a>
+        
+        
+        
+            <a class="section-title active" id="About" href="/willie/about">about</a>
+        
+
+        
+            <a class="section-title" id="Portfolio" href="/willie/portfolio">portfolio</a>
+        
+
+        
+            <a class="section-title" id="Gallery" href="/willie/gallery">gallery</a>
+        
+
+    </div>
+
+    <a href="javascript:void(0);" class="burger section-title" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+</div><style>
+  
+section {
+    min-height: 750px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+} 
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background-image: url('/willie/assets/photos/about/2017wjg0605_0040_colorcorrected.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blurb {
+    width: 750px;
+    background-color: #e5e6e3dc;
+    margin-left: -825px;
+    padding: 20px;
+}
+
+.blurb > p {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 1500px) {    
+    section {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .image {
+        height: 75vh;
+        min-height: 600px;
+        background-position: 15% 40%;
+    }
+    .blurb {
+        width: 100%;
+        margin: 0px;
+        padding: 20px 5%;
+    }
+} 
+
+</style>
+
+<section>
+    <div class="container">
+        <div class="image"></div>
+        <div class="blurb">
+            <p>With specializations in building analysis and recording, restoration and reconstruction, Graham brings seasoned expertise and an outstanding resume of practice to UMD. He has consulted on some of the nation’s most important historic sites, including the Maryland Statehouse, Mount Vernon, Monticello and several established museum sites. His international portfolio includes work at a World Heritage Site in Barbados; National Trust houses in Bermuda; Grade 1 listed buildings in England, Wales and Ireland; and court theaters in Western and Central Europe.</p>
+            <p>Graham has been integral in the evolution of professional standards in preservation fields, creating a new model of building analysis used widely by many museums. He also convened a conference to establish standards for dendrochronological analysis of historic buildings; has proposed protocols for architectural finish analysis to an international body of architectural paint researchers; and developed new procedures for applying mortar and plaster analysis to building investigations. Graham has written extensively on traditional building construction and is an accomplished architectural photographer.</p>
+            <p>Graham has authored numerous articles, book chapters and technical reports, most recently contributing several chapters to The Chesapeake House volume. This lushly illustrated book brings together decades of work by Chesapeake scholars on the craft of building and housing in the region.</p> 
+            <p style="margin-bottom: 0px;">Graham holds a B.S. in Architecture from the University of Maryland.</p>
+        </div>
+    </div>
+</section></body>
+
+</html>

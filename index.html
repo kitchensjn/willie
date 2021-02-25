@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Willie Graham</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://kit.fontawesome.com/b53b88607b.js" crossorigin="anonymous"></script>
+
+<script src="/willie/assets/scripts/navbar.js"></script>
+
+<link rel="stylesheet" href="/willie/assets/styles/main.css">
+
+<link rel="preload" href="/willie/assets/logo/wg-logo-white.png" as="image"></head>
+
+    <body><style>
+    .preload {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 50;
+        transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease-in;
+        -webkit-transition: opacity 1s ease-in;
+    }
+    .preload.finish {
+        opacity: 0;
+        pointer-events: none;
+    }
+</style>
+
+<div class="preload">
+    <img style="max-width: 100%;" src="/willie/assets/logo/wg-logo-white.png">
+</div>
+
+<script>
+
+    var elapsed = false;
+    var loaded = false;
+
+    setTimeout(function() {
+        elapsed = true;
+        if (loaded) {
+            const preload = document.querySelector('.preload');
+            preload.classList.add('finish');
+        };
+    }, 1000);
+
+    window.addEventListener('load', () => {
+        loaded = true;
+        if (elapsed) {
+            const preload = document.querySelector('.preload');
+            preload.classList.add('finish');
+        };
+    });
+
+</script><div id="navbar">
+    
+    <!--
+    <a style="padding: 0px 16px; height: 100%;" id="Logo" href="/willie/">
+        <img src="/willie/assets/logo/wg-logo-white.png" height=100%>
+    </a>
+    -->
+
+    
+    
+        <a class="section-title active" style="font-size: 30px; padding: 22px 16px 16px 16px; color: #e5e6e3;" href="/willie/" >WILLIE GRAHAM</a>
+    
+
+    <div id="right-links">
+
+        
+            <a class="section-title active" id="Home" href="/willie/">home</a>
+        
+        
+        
+            <a class="section-title" id="About" href="/willie/about">about</a>
+        
+
+        
+            <a class="section-title" id="Portfolio" href="/willie/portfolio">portfolio</a>
+        
+
+        
+            <a class="section-title" id="Gallery" href="/willie/gallery">gallery</a>
+        
+
+    </div>
+
+    <a href="javascript:void(0);" class="burger section-title" onclick="hamburger()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+</div><div class="background-carousel" style="width: 100%; height: 100%; margin: 0px; padding: 0px; overflow: hidden;">
+    
+    
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2005wjg0614945a.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2018WJG0725_0037.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2020WJG0606_0023.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2005wjg0609687.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/051989pua.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2009wjg1120_0031.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/Ends%20&%20Means%20Opt%202.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2004wjg1013004b.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2016wjg0603_0251%20b&w.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/362554pu%20%5B1%5D.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2015wjg1120_0363%20cropped.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2020WJG0620_0040.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/368286pu%20a.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <div style="width: 100vw; height: 100vh; background-image:url('/willie/assets/photos/home/carousel/2016wjg0625_0048.jpg'); background-size: cover; background-position: center;"></div>
+        
+    
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        $('.background-carousel').slick({
+            infinite: true,
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 7000,
+            speed: 1000,
+            pauseOnHover:false,
+            focus: false,
+            pauseOnFocus: false,
+            fade: true,
+        });
+    });
+
+</script><style>
+
+    #top {
+        display: table;
+        width: 100%;
+        padding: 5%;
+        background-color: #e5e6e3;
+    }
+
+    #top #half-left {
+        display: table-cell;
+        width: 50%;
+        background-image: url('/willie/assets/photos/home/bio/2010JRO1004004.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #top #half-right {
+        display: table-cell;
+        width: 50%;
+        min-height: 100%;
+    }
+
+    #top #half-right #bio {
+        width: 100%;
+        margin-bottom: 150px;
+        background-color: #438f95;
+        padding: 20px;
+        color: #e5e6e3;
+    }
+
+    #top #half-right #bio h2 {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    #top #half-right #bio hr {
+        border: 1.5px solid #e5e6e3;
+    }
+
+    #top #half-right #bio p {
+        font-size: 18px;
+        margin: 0px;
+    }
+    
+    #bottom {
+        position: relative;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.75);
+        width: 100%;
+        height: 75vw;
+        padding: 0% 5% 5% 5%;
+    }
+
+    #bottom #half-left {
+        width: 45%;
+        height: 100%;
+    }
+
+    #bottom #half-left #quad-top {
+        height: 50%;
+        width: 100%;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    #bottom #half-left #quad-top #mantle {
+        width: 100%;
+        height: 100%;
+        background-image: url('/willie/assets/photos/home/bio/2014wjg1001_0160.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #bottom #half-left #quad-bottom {
+        height: 50%;
+        width: 100%;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+
+    #bottom #half-left #quad-bottom #house {
+        position: relative;
+        left: 20%;
+        width: 80%;
+        height: 100%;
+        background-image: url('/willie/assets/photos/home/bio/Fig10-21A.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #bottom #half-right {
+        position: relative;
+        width: 55%;
+        height: 100%;
+    }
+
+    #bottom #half-right #quad-top {
+        margin-left: 15%;
+        width: 85%;
+        margin-top: -175px;
+        height: 30%;
+    }
+
+    #bottom #half-right #quad-top #room {
+        position: relative;
+        z-index: 1;
+        margin: 0%;
+        width: 100%;
+        height: 150%;
+        background-image: url('/willie/assets/photos/home/bio/Fig13-02.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    #bottom #half-right #quad-bottom {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+    }
+
+    #bottom #half-right #quad-bottom #box {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        top: 25%;
+    }
+    #bottom #half-right #quad-bottom #box #stones {
+        transform: scaleX(-1);
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        background-image: url('/willie/assets/photos/home/bio/Ile aux Marins w rock grave 1 600 dpi.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .headline {
+        position: absolute; 
+        background-color: #438f95;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .headline p {
+        margin: 0px;
+        font-size: 30px;
+        color: #e5e6e3;
+    }
+
+    #headline-4 {
+        display: none;
+    }
+
+    @media screen and (max-width: 1000px) {
+        #top #half-left {
+            display: block;
+            width: 100%;
+            height: 500px;
+        }
+        #top #half-right {
+            display: block;
+            width: 100%; 
+        }
+        #top #half-right #bio {
+            margin: 0px;
+        }
+
+        #bottom {
+            display: block;
+            height: 2500px;
+            padding: 0px;
+        }
+
+        #bottom #half-left {
+            width: 100%;
+            height: 50%;
+        }
+
+        #bottom #half-left #quad-top {
+            height: 50%;
+            width: 100%;
+            padding: 0px;
+            padding: 5% 5% 2.5% 5%;
+        }
+
+        #bottom #half-left #quad-bottom {
+            height: 50%;
+            width: 100%;
+            padding: 0px;
+            padding: 2.5% 5%;
+        }
+        #bottom #half-left #quad-bottom #house {
+            left: 0%;
+            width: 100%;
+        }
+
+
+        #bottom #half-right {
+            width: 100%;
+            height: 50%;
+        }
+
+        #bottom #half-right #quad-top {
+            width: 100%;
+            margin: 0px;
+            height: 50%;
+            padding: 2.5% 5%;
+        }
+
+        #bottom #half-right #quad-top #room {
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #bottom #half-right #quad-bottom {
+            padding: 0px;
+            height: 50%;
+            padding: 2.5% 5% 5% 5%;
+        }
+
+        #bottom #half-right #quad-bottom #box {
+            height: 100%;
+            top: 0%;
+        }
+        #bottom #half-right #quad-bottom #box #stones {
+            margin: 0px;
+        }
+
+        #headline-1 {
+            display: block;
+            position: absolute;
+            top: 25%;
+            z-index: 10;
+        }
+
+        #headline-2 {
+            display: none;
+        }
+
+        #headline-3 {
+            z-index: 10;
+        }
+
+        #headline-4 {
+            display: block;
+            position: absolute;
+            top: 75%;
+            z-index: 10;
+        }
+
+    }
+
+</style>
+
+
+<div id="top">
+    <div id="half-left" class="fade-in"></div>
+    <div id="half-right">
+        <div id="bio">
+            <h2>An independent historic architecture firm located in Midlothian, Virginia.</h2>
+            <hr></hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et erat vel nibh laoreet ultrices id in sapien. Curabitur felis purus, volutpat in risus posuere, hendrerit tempus lacus. Praesent sed enim sit amet nisl porttitor placerat. Maecenas vulputate purus lacus. Cras sit amet tortor consectetur, varius lorem id, dapibus mauris. Nunc porta ligula ut ipsum sagittis, ac imperdiet augue tincidunt. Aliquam vulputate molestie libero, quis mattis quam efficitur non. Maecenas molestie justo odio, dignissim consequat sem ultricies non. Vestibulum nec augue in nunc varius cursus vitae sed nibh. Phasellus porta odio quam, dignissim lobortis dolor congue at. Ut placerat, dui eget accumsan lobortis, odio ante rhoncus tellus, ut faucibus purus lacus vitae sapien. Curabitur et semper justo. Praesent pharetra nibh facilisis, tincidunt leo nec, ultrices odio. Nullam pulvinar, sem sed venenatis consequat, lectus mauris tempor libero, id hendrerit orci orci in nisl. Nam pharetra nisi eu libero lobortis, ut pretium mi auctor. Curabitur semper eros a nibh bibendum tempus. Maecenas elementum nisi a rutrum placerat. Ut finibus imperdiet aliquam. Mauris elit purus, viverra at turpis sit amet, rhoncus lobortis urna. Vivamus viverra ullamcorper iaculis. Vivamus a purus vel arcu varius sagittis quis sed arcu. Phasellus bibendum nibh eget orci pellentesque ultricies.</p>
+        </div>
+    </div>
+</div>
+<div id="bottom">
+    <div id="half-left">
+        <div id="quad-top">
+            <div id="mantle" class="fade-in"></div>
+        </div>
+        <div id="quad-bottom">
+            <div id="house" class="fade-in"></div>
+        </div>
+    </div>
+    <div id="half-right">
+        <div id="quad-top">
+            <div id="room" class="fade-in"></div>
+            <div id="headline-2" class="headline" style="position: relative; z-index: 2; top: 10%;">
+                <p>documentary photography</p>
+            </div>
+        </div>
+        <div id="quad-bottom">
+            <div id="box">
+                <div id="stones" class="fade-in"></div>
+            </div>
+        </div>
+    </div>
+    <div id="headline-1" class="headline">
+        <p>incredible design</p>
+    </div>
+    <div id="headline-3" class="headline">
+        <p>innovative historic restoration & recreation</p>
+    </div>
+    <div id="headline-4" class="headline">
+        <p>documentary photography</p>
+    </div>
+</div>
+
+<script src="/willie/assets/scripts/fader.js"></script><div id="contactbar">
+    <div class="content">
+        <img id="logo" src="/willie/assets/logo/wg-logo-black.png">
+        <div class="contact-info">
+            <p>w.graham@verizon.net</p>
+            <p>(804) 399-4339</p>
+        </div>
+        <div class="links">
+            
+                <a target="_blank" href="https://github.com/kitchensjn">
+                    <i class="fab fa-instagram link" title="Instagram"></i>
+                </a>
+            
+                <a target="_blank" href="https://www.linkedin.com/in/james-kitchens-668825b2/">
+                    <i class="fab fa-facebook-square link" title="Facebook"></i>
+                </a>
+            
+                <a target="_blank" href="/willie/assets/CV/KitchensJames_CV.pdf">
+                    <i class="far fa-envelope link" title="Email"></i>
+                </a>
+            
+        </div>
+        <p id="credit">Built by <a href="https://www.james-kitchens.com">James Kitchens</a>.</p>
+    </div>
+</div></body>
+
+</html>
